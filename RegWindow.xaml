@@ -1,0 +1,82 @@
+﻿<Window x:Class="TestDemo.Windows.RegWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestDemo.Windows"
+        mc:Ignorable="d"
+        Title="RegWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock Text="Регистрация"
+                       FontSize="32"
+                       HorizontalAlignment="Center"/>
+            <WrapPanel Margin="0 20 0 0" HorizontalAlignment="Center">
+                <StackPanel Margin="0 0 10 0">
+                    <TextBlock Text="Имя"
+                       FontSize="16"
+                       Margin="0 0 0 0"/>
+                    <TextBox x:Name="txbFName"
+                     Height="25"
+                     FontSize="16"
+                     Width="150"/>
+                </StackPanel>
+                <StackPanel Margin="10 0 0 0">
+                    <TextBlock Text="Фамилия"
+                               FontSize="16"
+                               Margin="0 00 0 0"/>
+                    <TextBox x:Name="txbLName"
+                             Height="25"
+                             FontSize="16"
+                             Width="150"/>
+                </StackPanel>
+                
+            </WrapPanel>
+            <WrapPanel Margin="0 10 0 0"
+                       HorizontalAlignment="Center">
+                <StackPanel Margin="0 0 10 0">
+                    <TextBlock Text="Пол"
+                        FontSize="16"/>
+                    <ComboBox Height="25"
+                      FontSize="16"
+                              Width="150"
+                      x:Name="cmbGender"/>
+                </StackPanel>
+                <StackPanel Margin="10 0 0 0">
+                    <TextBlock Text="Дата рождения"
+                        FontSize="16"/>
+                    <DatePicker Height="30"
+                                Width="150"
+                        FontSize="16"
+                        x:Name="dpBirthday"/>
+                </StackPanel>
+            </WrapPanel>
+            
+            
+
+            <TextBlock Text="Логин"
+                       FontSize="16"
+                       Margin="0 10 0 0"/>
+            <TextBox x:Name="txbLogin"
+                     Height="25"
+                     FontSize="16"/>
+            <TextBlock Text="Пароль"
+                       FontSize="16"
+                       Margin="0 10 0 0"/>
+            <PasswordBox x:Name="pwbPassword"
+                         Height="25"
+                         FontSize="16"/>
+            <TextBlock Text="Повторите пароль"
+                       FontSize="16"
+                       Margin="0 10 0 0"/>
+            <PasswordBox x:Name="pwbRepeatPassword"
+                         Height="25"
+                         FontSize="16"/>
+            <Button Content="Регистрация"
+                    Margin="0 40 0 0"
+                    FontSize="16"
+                    x:Name="btnRegister"
+                    Click="btnRegister_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
